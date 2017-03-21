@@ -11,7 +11,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     // Get request body
     dynamic data = await req.Content.ReadAsStringAsync<object>();
-
+	log.Info(data);
     // Set name to query string or body data
     name = name ?? data?.name;
 
